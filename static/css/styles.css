@@ -1,0 +1,12 @@
+.gallery {
+    display: flex;
+}
+
+.image-block {
+    max-width: 200px;
+    padding-right: 30px;
+}
+
+img {
+    border: 1px black solid;
+}

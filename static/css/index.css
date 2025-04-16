@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "reset.css";
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SFProText-Bold.woff2") format("woff2"), url("SFProText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SFProText-RegularItalic.woff2") format("woff2"), url("SFProText-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SFProText-SemiboldItalic.woff2") format("woff2"), url("SFProText-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SFProText-MediumItalic.woff2") format("woff2"), url("SFProText-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-BoldItalic.woff2") format("woff2"), url("../fonts/SFProText-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-Light.woff2") format("woff2"), url("../fonts/SFProText-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-Semibold.woff2") format("woff2"), url("../fonts/SFProText-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-Bold.woff2") format("woff2"), url("../fonts/SFProText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-Medium.woff2") format("woff2"), url("../fonts/SFProText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-Regular.woff2") format("woff2"), url("../fonts/SFProText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-HeavyItalic.woff2") format("woff2"), url("../fonts/SFProText-HeavyItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-Heavy.woff2") format("woff2"), url("../fonts/SFProText-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/SFProText-LightItalic.woff2") format("woff2"), url("../fonts/SFProText-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+    color: #FFF;
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px; /* 137.5% */
+    position: relative;
+    overflow-x: hidden;
+    /* height: 3000px; */
+    min-width: 320px;
+    background-color: #EFEFEF;
+  } 
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+}
+
+.header_scroll {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.4s ease;
+}
+
+/* .header:hover {
+  background-color: black;
+  transition: 0.4s ease;
+} */
+
+.nav {
+  /* padding: 0 543px 0 360px; */
+  /* padding: 0 5% 0 5%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+  height: 100%;
+  width: 800px;
+}
+
+.logo {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+}
+.logo div {
+  padding-left: 8px;
+}
+.logo div p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.menu {
+  display: flex;
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+}
+
+/* .item {
+  padding: 0 20px 0 20px;
+} */
+
+.href {
+  display: flex;
+  position: relative;
+  color: #5f5f5f;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style:italic;
+  font-weight: 500;
+  line-height: normal;
+  padding-right: 20px;
+  /* letter-spacing: 1.2em;
+  margin-right: -1.2em; */
+}
+
+.href-links {
+  position: relative;
+  color: rgb(233, 233, 233);
+  text-align: center;
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-right: 10px;
+}
+
+.href:hover {
+  color: #20D883;
+  position: relative;
+}
+
+.href-links:hover {
+  color: #20D883;
+  position: relative;
+}
+
+.people {
+  display: flex;
+  justify-content: center;
+  padding-top: 220px;
+}
+
+.cult{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.photo{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* .href:hover:after {
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #20D883;
+} */
+
+.welcome {
+  width: 100%;
+  /* height: 1020px; */
+  padding: 0 5% 0 5%;
+  /* background: url("../img/welcome.png") no-repeat center local; */
+  background-size: cover;
+}
+.welcome h1 {
+  color: #303030;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 100px;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 15px;
+}
+.welcome h2 {
+  color: #858585;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: normal;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 0px;
+  letter-spacing: 7px;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+.last_text {
+  width: auto;
+}
+
+.welcome h3 {
+  color: rgb(142, 143, 144);
+  font-family: "SF Pro Text";
+  font-size: 13px;
+  line-height: normal;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.welcome h4 {
+  color: rgb(142, 143, 144);
+  font-family: "SF Pro Text";
+  font-size: 12px;
+  line-height: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.welcome h5 {
+  color: rgb(142, 143, 144);
+  font-family: "SF Pro Text";
+  font-size: 10px;
+  line-height: normal;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  text-align: left;
+  height: 25px;
+}
+
+.welcome h6 {
+  color: rgb(236, 236, 236);
+  font-family: "SF Pro Text";
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+  height: 25px;
+}
+
+.community-content p {
+  color: rgb(142, 143, 144);
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 200;
+  padding-top: 20px;
+  text-align: left;
+  padding-bottom: 2px;
+}
+
+.welcome .img__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 440px) {
+    .menu{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.community-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.community-container{
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1 0 0px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: 400px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  max-width: 460px;
+}
+
+.community-block {
+  padding: 20px;
+  /* border: 2px solid #2c2b2b; */
+  /* background-color: #383535; */
+  border: 0.3px solid rgb(32, 32, 32);
+  border-radius: 5px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0 20px 20px 20px; 
+  max-width: 460px;
+}
+
+.community-content {
+  font-size: 16px;
+  /* border: 2px solid #5c5858; */
+  background-color: black;
+}
+
+.community-block::-webkit-scrollbar {
+  display: none;
+}
+
+.community-block {
+  scrollbar-width: none;
+}
+
+.intro-page {
+  height: 100vh; 
+}
+
+.intro-content {
+  background: linear-gradient(180deg,rgba(17,17,17,0) 0%,rgb(14, 14, 14) 100%);
+  bottom: -2px;
+  left: 0%;
+  right: 0;
+  flex: none;
+  height: 122px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  max-width: 460px;
+}

@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+canvas {
+    border: 2px solid #333;
+    background: #fff;
+    margin-top: 20px;
+    /* cursor: none; */
+}
+.toolbar {
+    margin: 20px 0;
+}
+.color {
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#eraser, #clear, #save, #toggle-palette {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#brush-preview {
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    opacity: 0.6;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Галерея работ</h1>
+    <div class="gallery">
+        {% for img in images %}
+            <div class="image-block">
+                <img src="{{ img.filename }}" alt="Рисунок" style="max-width: 200px;">
+                <p>{{ img.nickname }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
