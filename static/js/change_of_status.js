@@ -1,3 +1,29 @@
+function change_status(id){
+    const nickname = prompt("Введите ваш никнейм:");
+    if (!nickname) return;
+
+    const image = canvas.toDataURL("image/png");
+
+    fetch("/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: image, nickname: nickname })
+    })
+    .then(res => res.json())
+    .then(() => {
+        alert("Изображение сохранено!");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    })
+    .catch(err => {
+        alert("Ошибка при сохранении.");
+        console.error(err);
+    });
+}
+
+
+
+
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 

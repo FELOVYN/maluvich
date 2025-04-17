@@ -26,6 +26,7 @@ class Image(db.Model):
     filename = db.Column(db.String(120), nullable=False)
     nickname = db.Column(db.String(80), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    status = db.Column(db.Boolean, default=False)
 
 # Админка
 admin = Admin(app, name='Галерея', template_mode='bootstrap3')
@@ -39,7 +40,15 @@ def draw():
 # Страница галереи
 @app.route("/gallery")
 def gallery():
+    # images = Image.query.order_by(Image.created_at.desc()).all()
+    images = Image.query.filter_by(status=True).order_by(Image.created_at.desc()).all()
+    return render_template("gallery.html", images=images)
+
+# Страница галереи
+@app.route("/gallery_admin")
+def gallery():
     images = Image.query.order_by(Image.created_at.desc()).all()
+    # images = Image.query.filter_by(status=True).order_by(Image.created_at.desc()).all()
     return render_template("gallery.html", images=images)
 
 # Сохранение изображения
@@ -62,7 +71,7 @@ def save():
         f.write(image_bytes)
 
     # Сохраняем в базу данных
-    new_image = Image(filename=f"/static/images/{filename}", nickname=nickname)
+    new_image = Image(filename=f"/static/images/{filename}", nickname=nickname, status = False)
     db.session.add(new_image)
     db.session.commit()
 
